@@ -1,6 +1,6 @@
 ## vmdatastore: vCenter datastore manager 
 
-This command-line tool lets you add datastore to your ESX hosts.
+This command-line tool lets you add datastores to your ESX hosts.
 
 Requirements
 * linux or windows box
@@ -24,4 +24,26 @@ Usage:
 ------
 
 ```
+usage: vmdatastore [-h] [-u USER] [-p PASSWORD] [-t TARGET] [-o PORT]
+                   [-c CONFIG] [-v]
+                   command
+
+vCenter datastore manager.
+
+positional arguments:
+  command               Command to execute (list_datastore,
+                        list_unresolved_volumes, resignature_volumes,
+                        resolve_volumes)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u USER, --user USER  Specify the user account to use to connect to vCenter
+  -p PASSWORD, --password PASSWORD
+                        Specify the password associated with the user account
+  -t TARGET, --target TARGET
+                        Specify the vCenter host to connect to
+  -o PORT, --port PORT  Port to connect on (default is 443)
+  -c CONFIG, --config CONFIG
+                        Configuration file to use
+  -v, --version         Print program version and exit.
 ```
